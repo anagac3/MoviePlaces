@@ -33,20 +33,22 @@ struct MovieListParser {
         for movieData in moviesData {
             guard movieData.count <= expectedArrayLength, let title = movieData[MovieParserPosition.title.rawValue] as? String else { continue }
             var newMovie: Movie
+            //Prevent titles repeating over spaces at the end of title
+            let trimmedTitle = title.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             // If movie object is already created, retrieve and update it for the new location, otherwise, create  a new one
-            if let movie = titlesDictionary[title] {
+            if let movie = titlesDictionary[trimmedTitle] {
                 newMovie = movie
             } else {
                 let releaseYear = movieData[MovieParserPosition.releaseYear.rawValue] as? String ?? ""
                 let director = movieData[MovieParserPosition.director.rawValue] as? String ?? ""
                 let productionCompany = movieData[MovieParserPosition.productionCompany.rawValue] as? String ?? ""
                 
-                newMovie = Movie(title: title, releaseYear: releaseYear, director: director, productionCompany: productionCompany, locations: [Location]())
+                newMovie = Movie(title: trimmedTitle, releaseYear: releaseYear, director: director, productionCompany: productionCompany, locations: [Location]())
             }
             guard let location = movieData[MovieParserPosition.locations.rawValue] as? String else { continue }
             let newLocation = Location(name: location, latitude: nil, longitude: nil)
             newMovie.locations.append(newLocation)
-            titlesDictionary[title] = newMovie
+            titlesDictionary[trimmedTitle] = newMovie
         }
         
         return Array(titlesDictionary.values)

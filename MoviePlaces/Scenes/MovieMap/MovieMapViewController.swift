@@ -46,6 +46,7 @@ class MovieMapViewController: UIViewController {
         super.viewDidDisappear(animated)
         if let locations = locations {
             map.removeAnnotations(locations)
+            self.locations = nil
         }
     }
     
@@ -54,14 +55,30 @@ class MovieMapViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinates, zoomRadius, zoomRadius)
         map.setRegion(coordinateRegion, animated: animated)
     }
+    
+    private func addAnnotations() {
+        if let map = map, let locations = locations {
+            map.addAnnotations(locations)
+            map.showAnnotations(locations, animated: true)
+        }
+    }
 }
 
 extension MovieMapViewController: MovieMapViewControllerDelegate {
     
     func successFetchedLocations(locations: [LocationAnnotation]) {
+        if let previousLocations = self.locations {
+            map.removeAnnotations(previousLocations)
+        }
         self.locations = locations
-        map.addAnnotations(locations)
-        map.showAnnotations(locations, animated: true)
+        //Map may not be initialized, so give it a little time
+        if (map == nil) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+               self.addAnnotations()
+            }
+        }else {
+           addAnnotations()
+        }
     }
     
     func failedFetchingLocations(error: String) {

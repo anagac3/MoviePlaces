@@ -50,14 +50,7 @@ class Router {
             guard let movie = parameters as? Movie else { return }
             masterViewController.collapseDetail = false
             splitViewController.showDetailViewController(detailViewController.navigationController!, sender: nil)
-            //Map may not be initialized, so give it a little time
-            if detailViewController.map == nil {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.detailViewController.movie = movie
-                }
-            }else {
-                self.detailViewController.movie = movie
-            }
+            detailViewController.movie = movie
         }
     }
     

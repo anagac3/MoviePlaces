@@ -51,6 +51,9 @@
 		A68CD45420E02D280064BF78 /* MovieMapGeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */; };
 		A68CD45620E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */; };
 		A68CD45820E03E710064BF78 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45720E03E710064BF78 /* LocationAnnotation.swift */; };
+		A68CD45B20E0A4750064BF78 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45A20E0A4740064BF78 /* GeocoderManager.swift */; };
+		A68CD45D20E0A6480064BF78 /* GeocoderManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45C20E0A6480064BF78 /* GeocoderManagerProtocol.swift */; };
+		A68CD45F20E0A68E0064BF78 /* GeocoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45E20E0A68E0064BF78 /* GeocoderFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapGeolocationService.swift; sourceTree = "<group>"; };
 		A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapGeolocationServiceProtocol.swift; sourceTree = "<group>"; };
 		A68CD45720E03E710064BF78 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		A68CD45A20E0A4740064BF78 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
+		A68CD45C20E0A6480064BF78 /* GeocoderManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerProtocol.swift; sourceTree = "<group>"; };
+		A68CD45E20E0A68E0064BF78 /* GeocoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,7 @@
 			children = (
 				A68CD43F20E021D80064BF78 /* Router */,
 				A68CD43C20E01FBC0064BF78 /* Constants */,
+				A68CD45920E0A45D0064BF78 /* Geocoder */,
 				A60D821020DEFA7B002FB592 /* Networking */,
 				A60D820620DEF382002FB592 /* Storage */,
 				A60D81F620DEF186002FB592 /* Models */,
@@ -398,6 +405,16 @@
 			children = (
 				A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */,
 				A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */,
+			);
+			path = Geocoder;
+			sourceTree = "<group>";
+		};
+		A68CD45920E0A45D0064BF78 /* Geocoder */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD45A20E0A4740064BF78 /* GeocoderManager.swift */,
+				A68CD45C20E0A6480064BF78 /* GeocoderManagerProtocol.swift */,
+				A68CD45E20E0A68E0064BF78 /* GeocoderFactory.swift */,
 			);
 			path = Geocoder;
 			sourceTree = "<group>";
@@ -523,14 +540,17 @@
 				A68CD43920E0095F0064BF78 /* StorageManagerProtocol.swift in Sources */,
 				A68CD45620E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift in Sources */,
 				A60D821520DEFBCD002FB592 /* NetowrkingManagerProtocol.swift in Sources */,
+				A68CD45D20E0A6480064BF78 /* GeocoderManagerProtocol.swift in Sources */,
 				A60D822420DF568C002FB592 /* MovieListCell.swift in Sources */,
 				A68CD43420E006130064BF78 /* MovieListParser.swift in Sources */,
+				A68CD45B20E0A4750064BF78 /* GeocoderManager.swift in Sources */,
 				A60D820B20DEF3AD002FB592 /* Movie+CoreDataProperties.swift in Sources */,
 				A60D81E720DEEE83002FB592 /* MovieListViewController.swift in Sources */,
 				A60D81F820DEF19C002FB592 /* Movie.swift in Sources */,
 				A60D821F20DF1CBF002FB592 /* MovieListSceneConfigurator.swift in Sources */,
 				A60D821D20DF0849002FB592 /* NetworkingServiceResult.swift in Sources */,
 				A60D820D20DEF3AD002FB592 /* Location+CoreDataProperties.swift in Sources */,
+				A68CD45F20E0A68E0064BF78 /* GeocoderFactory.swift in Sources */,
 				A60D81F520DEF014002FB592 /* MovieListInteractorProtocol.swift in Sources */,
 				A68CD43120E005300064BF78 /* MovieListStorageServiceProtocol.swift in Sources */,
 				A60D821B20DF0806002FB592 /* MovieListNetworkingServiceProtocol.swift in Sources */,
