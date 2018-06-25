@@ -11,7 +11,6 @@
 		A60D81C120DEE778002FB592 /* MoviePlaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A60D81BF20DEE778002FB592 /* MoviePlaces.xcdatamodeld */; };
 		A60D81CA20DEE77B002FB592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60D81C920DEE77B002FB592 /* Assets.xcassets */; };
 		A60D81CD20DEE77B002FB592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60D81CB20DEE77B002FB592 /* LaunchScreen.storyboard */; };
-		A60D81D820DEE77C002FB592 /* MoviePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81D720DEE77C002FB592 /* MoviePlacesTests.swift */; };
 		A60D81E720DEEE83002FB592 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81E520DEEE83002FB592 /* MovieListViewController.swift */; };
 		A60D81E820DEEE83002FB592 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60D81E620DEEE83002FB592 /* MovieListViewController.xib */; };
 		A60D81EC20DEEEAF002FB592 /* MovieMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81EA20DEEEAF002FB592 /* MovieMapViewController.swift */; };
@@ -54,6 +53,7 @@
 		A68CD45B20E0A4750064BF78 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45A20E0A4740064BF78 /* GeocoderManager.swift */; };
 		A68CD45D20E0A6480064BF78 /* GeocoderManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45C20E0A6480064BF78 /* GeocoderManagerProtocol.swift */; };
 		A68CD45F20E0A68E0064BF78 /* GeocoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45E20E0A68E0064BF78 /* GeocoderFactory.swift */; };
+		A6D7CC7A20E14AB10042F162 /* MovieParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7CC7920E14AB10042F162 /* MovieParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		A60D81CC20DEE77B002FB592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A60D81CE20DEE77B002FB592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60D81D320DEE77C002FB592 /* MoviePlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviePlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60D81D720DEE77C002FB592 /* MoviePlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlacesTests.swift; sourceTree = "<group>"; };
 		A60D81D920DEE77C002FB592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60D81E520DEEE83002FB592 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		A60D81E620DEEE83002FB592 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		A68CD45A20E0A4740064BF78 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		A68CD45C20E0A6480064BF78 /* GeocoderManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerProtocol.swift; sourceTree = "<group>"; };
 		A68CD45E20E0A68E0064BF78 /* GeocoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderFactory.swift; sourceTree = "<group>"; };
+		A6D7CC7920E14AB10042F162 /* MovieParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 		A60D81BC20DEE778002FB592 /* MoviePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				A60D820F20DEFA49002FB592 /* Common */,
 				A60D81BD20DEE778002FB592 /* AppDelegate.swift */,
+				A60D820F20DEFA49002FB592 /* Common */,
 				A60D81E320DEEE1A002FB592 /* Scenes */,
 				A60D81E220DEEE0C002FB592 /* Resources */,
 			);
@@ -170,8 +170,8 @@
 		A60D81D620DEE77C002FB592 /* MoviePlacesTests */ = {
 			isa = PBXGroup;
 			children = (
-				A60D81D720DEE77C002FB592 /* MoviePlacesTests.swift */,
 				A60D81D920DEE77C002FB592 /* Info.plist */,
+				A6D7CC7920E14AB10042F162 /* MovieParserTests.swift */,
 			);
 			path = MoviePlacesTests;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60D81D820DEE77C002FB592 /* MoviePlacesTests.swift in Sources */,
+				A6D7CC7A20E14AB10042F162 /* MovieParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

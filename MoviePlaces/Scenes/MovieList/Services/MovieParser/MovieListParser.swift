@@ -20,7 +20,7 @@ struct MovieListParser {
     
     func parseData(_ data: Any) -> [Movie] {
         
-        let expectedArrayLength = 19
+        let largestKey = 14
         
         //Holding generated data
         var titlesDictionary = Dictionary<String, Movie>()
@@ -31,7 +31,7 @@ struct MovieListParser {
         guard let dataDictionary = jsonObject as? Dictionary<String, Any>, let moviesData = dataDictionary["data"] as? [[Any]] else { return [Movie]() }
         //Merging movies based on movie title, and updating locations
         for movieData in moviesData {
-            guard movieData.count <= expectedArrayLength, let title = movieData[MovieParserPosition.title.rawValue] as? String else { continue }
+            guard movieData.count > largestKey, let title = movieData[MovieParserPosition.title.rawValue] as? String else { continue }
             var newMovie: Movie
             //Prevent titles repeating over spaces at the end of title
             let trimmedTitle = title.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
