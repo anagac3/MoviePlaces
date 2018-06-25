@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let initialController = Router.shared.initializeApp()
         
         window = UIWindow()
-        window?.rootViewController = navigationController
+        window?.rootViewController = initialController
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         

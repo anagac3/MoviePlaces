@@ -1,5 +1,5 @@
 //
-//  StorageManagerProtocol.swift
+//  MovieMapServiceProtocol.swift
 //  MoviePlaces
 //
 //  Created by Andres Aguilar on 6/24/18.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-protocol StorageManagerProtocol {
+protocol MovieMapStorageServiceProtocol {
     
-    func save(movies: [Movie]) -> Bool
-    func retrieveMovies() -> [Movie]?
     func save(locations: [Location], for movie: Movie) -> Bool
     func retrieveLocations(for movie: Movie) -> [Location]?
+    
 }

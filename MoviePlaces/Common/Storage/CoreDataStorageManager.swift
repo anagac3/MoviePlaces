@@ -48,7 +48,55 @@ class CoreDataStorageManager: StorageManagerProtocol {
         } catch {
             return nil
         }
+    }
+    
+    func save(locations: [Location], for movie: Movie) -> Bool {
         
+        if let savedMovie = retrieveMovie(with: movie.title) {
+            var locationsSet = Set<MOLocation>()
+            for location in locations {
+                let newLocation = encode(location: location)
+                locationsSet.insert(newLocation)
+            }
+            if let savedLocations = savedMovie.locations {
+                savedMovie.removeFromLocations(savedLocations)
+            }
+            savedMovie.addToLocations(NSSet(set: locationsSet))
+            
+            return saveContext()
+        }else {
+            return false
+        }
+    }
+    
+    func retrieveLocations(for movie: Movie) -> [Location]? {
+        if let savedMovie = retrieveMovie(with: movie.title), let moLocations = savedMovie.locations as? Set<MOLocation> {
+            var locations = [Location]()
+            for moLocation in moLocations {
+                guard let newLocation = decodeToLocation(moLocation: moLocation) else { continue }
+                locations.append(newLocation)
+            }
+            return locations
+        } else {
+            return nil
+        }
+    }
+    
+    func retrieveMovie(with title: String) -> MOMovie? {
+        let context = persistentContainer.viewContext
+        guard persistentStoreLoaded else { return nil }
+        let predicate = NSPredicate(format: "title == %@", title)
+        let fetchRequest: NSFetchRequest<MOMovie> = MOMovie.fetchRequest()
+        fetchRequest.predicate = predicate
+        do {
+            let result = try context.fetch(fetchRequest)
+            if let first = result.first {
+                return first
+            }
+            return nil
+        } catch {
+            return nil
+        }
     }
     
     // MARK: - Core Data Saving support

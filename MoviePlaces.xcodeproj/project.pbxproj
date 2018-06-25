@@ -16,8 +16,8 @@
 		A60D81D820DEE77C002FB592 /* MoviePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81D720DEE77C002FB592 /* MoviePlacesTests.swift */; };
 		A60D81E720DEEE83002FB592 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81E520DEEE83002FB592 /* MovieListViewController.swift */; };
 		A60D81E820DEEE83002FB592 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60D81E620DEEE83002FB592 /* MovieListViewController.xib */; };
-		A60D81EC20DEEEAF002FB592 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81EA20DEEEAF002FB592 /* PlacesViewController.swift */; };
-		A60D81ED20DEEEAF002FB592 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60D81EB20DEEEAF002FB592 /* PlacesViewController.xib */; };
+		A60D81EC20DEEEAF002FB592 /* MovieMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81EA20DEEEAF002FB592 /* MovieMapViewController.swift */; };
+		A60D81ED20DEEEAF002FB592 /* MovieMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60D81EB20DEEEAF002FB592 /* MovieMapViewController.xib */; };
 		A60D81EF20DEEFDA002FB592 /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81EE20DEEFDA002FB592 /* MovieListInteractor.swift */; };
 		A60D81F320DEF002002FB592 /* MovieListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81F220DEF002002FB592 /* MovieListViewControllerDelegate.swift */; };
 		A60D81F520DEF014002FB592 /* MovieListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D81F420DEF014002FB592 /* MovieListInteractorProtocol.swift */; };
@@ -44,6 +44,15 @@
 		A68CD43B20E009940064BF78 /* StorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD43A20E009940064BF78 /* StorageFactory.swift */; };
 		A68CD43E20E01FCA0064BF78 /* MoviePlacesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD43D20E01FCA0064BF78 /* MoviePlacesConstants.swift */; };
 		A68CD44120E021E40064BF78 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44020E021E40064BF78 /* Router.swift */; };
+		A68CD44420E0247F0064BF78 /* MovieMapSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44320E0247F0064BF78 /* MovieMapSceneConfigurator.swift */; };
+		A68CD44620E024BB0064BF78 /* MovieMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44520E024BB0064BF78 /* MovieMapInteractor.swift */; };
+		A68CD44920E024D70064BF78 /* MovieMapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44820E024D70064BF78 /* MovieMapViewControllerDelegate.swift */; };
+		A68CD44B20E024E50064BF78 /* MovieMapInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44A20E024E50064BF78 /* MovieMapInteractorProtocol.swift */; };
+		A68CD45020E02CE40064BF78 /* MovieMapStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD44F20E02CE40064BF78 /* MovieMapStorageService.swift */; };
+		A68CD45220E02CF10064BF78 /* MovieMapStorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45120E02CF10064BF78 /* MovieMapStorageServiceProtocol.swift */; };
+		A68CD45420E02D280064BF78 /* MovieMapGeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */; };
+		A68CD45620E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */; };
+		A68CD45820E03E710064BF78 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68CD45720E03E710064BF78 /* LocationAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +79,8 @@
 		A60D81D920DEE77C002FB592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60D81E520DEEE83002FB592 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		A60D81E620DEEE83002FB592 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
-		A60D81EA20DEEEAF002FB592 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
-		A60D81EB20DEEEAF002FB592 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
+		A60D81EA20DEEEAF002FB592 /* MovieMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapViewController.swift; sourceTree = "<group>"; };
+		A60D81EB20DEEEAF002FB592 /* MovieMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieMapViewController.xib; sourceTree = "<group>"; };
 		A60D81EE20DEEFDA002FB592 /* MovieListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
 		A60D81F220DEF002002FB592 /* MovieListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A60D81F420DEF014002FB592 /* MovieListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -98,6 +107,15 @@
 		A68CD43A20E009940064BF78 /* StorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFactory.swift; sourceTree = "<group>"; };
 		A68CD43D20E01FCA0064BF78 /* MoviePlacesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlacesConstants.swift; sourceTree = "<group>"; };
 		A68CD44020E021E40064BF78 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A68CD44320E0247F0064BF78 /* MovieMapSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapSceneConfigurator.swift; sourceTree = "<group>"; };
+		A68CD44520E024BB0064BF78 /* MovieMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapInteractor.swift; sourceTree = "<group>"; };
+		A68CD44820E024D70064BF78 /* MovieMapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A68CD44A20E024E50064BF78 /* MovieMapInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapInteractorProtocol.swift; sourceTree = "<group>"; };
+		A68CD44F20E02CE40064BF78 /* MovieMapStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapStorageService.swift; sourceTree = "<group>"; };
+		A68CD45120E02CF10064BF78 /* MovieMapStorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapStorageServiceProtocol.swift; sourceTree = "<group>"; };
+		A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapGeolocationService.swift; sourceTree = "<group>"; };
+		A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapGeolocationServiceProtocol.swift; sourceTree = "<group>"; };
+		A68CD45720E03E710064BF78 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +190,7 @@
 		A60D81E320DEEE1A002FB592 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A60D81E920DEEE92002FB592 /* Places */,
+				A60D81E920DEEE92002FB592 /* MovieMap */,
 				A60D81E420DEEE34002FB592 /* MovieList */,
 			);
 			path = Scenes;
@@ -192,13 +210,17 @@
 			path = MovieList;
 			sourceTree = "<group>";
 		};
-		A60D81E920DEEE92002FB592 /* Places */ = {
+		A60D81E920DEEE92002FB592 /* MovieMap */ = {
 			isa = PBXGroup;
 			children = (
-				A60D81EA20DEEEAF002FB592 /* PlacesViewController.swift */,
-				A60D81EB20DEEEAF002FB592 /* PlacesViewController.xib */,
+				A68CD44220E024710064BF78 /* Configurator */,
+				A68CD44C20E02CC60064BF78 /* Services */,
+				A68CD44720E024C80064BF78 /* Protocols */,
+				A60D81EA20DEEEAF002FB592 /* MovieMapViewController.swift */,
+				A60D81EB20DEEEAF002FB592 /* MovieMapViewController.xib */,
+				A68CD44520E024BB0064BF78 /* MovieMapInteractor.swift */,
 			);
-			path = Places;
+			path = MovieMap;
 			sourceTree = "<group>";
 		};
 		A60D81F020DEEFE7002FB592 /* Views */ = {
@@ -223,6 +245,7 @@
 			children = (
 				A60D81F720DEF19C002FB592 /* Movie.swift */,
 				A60D81F920DEF1E1002FB592 /* Location.swift */,
+				A68CD45720E03E710064BF78 /* LocationAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +364,50 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A68CD44220E024710064BF78 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD44320E0247F0064BF78 /* MovieMapSceneConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		A68CD44720E024C80064BF78 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD44820E024D70064BF78 /* MovieMapViewControllerDelegate.swift */,
+				A68CD44A20E024E50064BF78 /* MovieMapInteractorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A68CD44C20E02CC60064BF78 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD44E20E02CCF0064BF78 /* Geocoder */,
+				A68CD44D20E02CCA0064BF78 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A68CD44D20E02CCA0064BF78 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD44F20E02CE40064BF78 /* MovieMapStorageService.swift */,
+				A68CD45120E02CF10064BF78 /* MovieMapStorageServiceProtocol.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A68CD44E20E02CCF0064BF78 /* Geocoder */ = {
+			isa = PBXGroup;
+			children = (
+				A68CD45320E02D280064BF78 /* MovieMapGeolocationService.swift */,
+				A68CD45520E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift */,
+			);
+			path = Geocoder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,7 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60D81ED20DEEEAF002FB592 /* PlacesViewController.xib in Resources */,
+				A60D81ED20DEEEAF002FB592 /* MovieMapViewController.xib in Resources */,
 				A60D81E820DEEE83002FB592 /* MovieListViewController.xib in Resources */,
 				A60D81CD20DEE77B002FB592 /* LaunchScreen.storyboard in Resources */,
 				A60D822520DF568C002FB592 /* MovieListCell.xib in Resources */,
@@ -445,18 +512,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60D821720DEFC90002FB592 /* NetworkingFactory.swift in Sources */,
+				A68CD44920E024D70064BF78 /* MovieMapViewControllerDelegate.swift in Sources */,
 				A68CD43B20E009940064BF78 /* StorageFactory.swift in Sources */,
+				A68CD45020E02CE40064BF78 /* MovieMapStorageService.swift in Sources */,
 				A60D821920DF07F6002FB592 /* MovieListNetworkingService.swift in Sources */,
 				A68CD42F20E005220064BF78 /* MovieListStorageService.swift in Sources */,
 				A60D821320DEFAB2002FB592 /* NetworkingManager.swift in Sources */,
 				A68CD44120E021E40064BF78 /* Router.swift in Sources */,
 				A60D820C20DEF3AD002FB592 /* Location+CoreDataClass.swift in Sources */,
-				A60D81EC20DEEEAF002FB592 /* PlacesViewController.swift in Sources */,
+				A60D81EC20DEEEAF002FB592 /* MovieMapViewController.swift in Sources */,
+				A68CD45220E02CF10064BF78 /* MovieMapStorageServiceProtocol.swift in Sources */,
 				A60D81FA20DEF1E1002FB592 /* Location.swift in Sources */,
 				A68CD43E20E01FCA0064BF78 /* MoviePlacesConstants.swift in Sources */,
 				A60D81EF20DEEFDA002FB592 /* MovieListInteractor.swift in Sources */,
 				A60D81C120DEE778002FB592 /* MoviePlaces.xcdatamodeld in Sources */,
 				A68CD43920E0095F0064BF78 /* StorageManagerProtocol.swift in Sources */,
+				A68CD45620E02D330064BF78 /* MovieMapGeolocationServiceProtocol.swift in Sources */,
 				A60D821520DEFBCD002FB592 /* NetowrkingManagerProtocol.swift in Sources */,
 				A60D822420DF568C002FB592 /* MovieListCell.swift in Sources */,
 				A68CD43420E006130064BF78 /* MovieListParser.swift in Sources */,
@@ -469,12 +540,17 @@
 				A60D81F520DEF014002FB592 /* MovieListInteractorProtocol.swift in Sources */,
 				A68CD43120E005300064BF78 /* MovieListStorageServiceProtocol.swift in Sources */,
 				A60D821B20DF0806002FB592 /* MovieListNetworkingServiceProtocol.swift in Sources */,
+				A68CD45420E02D280064BF78 /* MovieMapGeolocationService.swift in Sources */,
+				A68CD44420E0247F0064BF78 /* MovieMapSceneConfigurator.swift in Sources */,
+				A68CD44620E024BB0064BF78 /* MovieMapInteractor.swift in Sources */,
 				A68CD43720E0071E0064BF78 /* CoreDataStorageManager.swift in Sources */,
 				A60D81BE20DEE778002FB592 /* AppDelegate.swift in Sources */,
 				A60D81C320DEE778002FB592 /* MasterViewController.swift in Sources */,
 				A60D81F320DEF002002FB592 /* MovieListViewControllerDelegate.swift in Sources */,
+				A68CD44B20E024E50064BF78 /* MovieMapInteractorProtocol.swift in Sources */,
 				A60D820E20DEF3AD002FB592 /* Movie+CoreDataClass.swift in Sources */,
 				A60D81C520DEE778002FB592 /* DetailViewController.swift in Sources */,
+				A68CD45820E03E710064BF78 /* LocationAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F5PPFGU8Q9;
 				INFOPLIST_FILE = "$(SRCROOT)/MoviePlaces/Resources/Info.plist";
@@ -636,6 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anagac.MoviePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F5PPFGU8Q9;
 				INFOPLIST_FILE = "$(SRCROOT)/MoviePlaces/Resources/Info.plist";
@@ -655,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anagac.MoviePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
