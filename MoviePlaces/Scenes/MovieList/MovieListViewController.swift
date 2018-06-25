@@ -23,12 +23,14 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var reloadButton: UIButton!
     
-    let pickerContainerHeight: CGFloat = 200
-    let filterArray = [FilterTypes.title, FilterTypes.director, FilterTypes.productionCompany, FilterTypes.releaseYear]
+    private let pickerContainerHeight: CGFloat = 200
+    private let filterArray = [FilterTypes.title, FilterTypes.director, FilterTypes.productionCompany, FilterTypes.releaseYear]
     private let movieListCellIdentifier = "movieListCell"
     
     private let interactor: MovieListInteractorProtocol
     private var movies: [Movie]?
+    
+    var collapseDetail: Bool = true
     
     init(interactor: MovieListInteractorProtocol) {
         self.interactor = interactor
@@ -181,7 +183,6 @@ extension MovieListViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         return 1
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return filterArray.count
     }
@@ -190,5 +191,11 @@ extension MovieListViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         let title = filterArray[row].rawValue
         return title.capitalized
     }
+}
+
+extension MovieListViewController: UISplitViewControllerDelegate {
     
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return collapseDetail
+    }
 }

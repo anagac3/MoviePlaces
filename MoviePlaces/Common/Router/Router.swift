@@ -17,18 +17,28 @@ class Router {
         case map
     }
     
-    private var currentNavigationController: UINavigationController?
-    private var currentRootViewController: UIViewController?
+    private var masterViewController: MovieListViewController!
+    private var detailViewController: MovieMapViewController!
+    private var splitViewController: UISplitViewController!
     
     func initializeApp() -> UIViewController {
+        splitViewController = UISplitViewController()
         
-        let movieListVC = configureMovieList()
-        let navigationController = UINavigationController.init(rootViewController: movieListVC)
+        masterViewController = configureMovieList()
+        let navigationController = UINavigationController.init(rootViewController: masterViewController)
         
-        currentNavigationController = navigationController
-        currentRootViewController = movieListVC
+        detailViewController = configureMovieMap()
+        let navigationControllerDetail = UINavigationController.init(rootViewController: detailViewController)
         
-        return navigationController
+        splitViewController.viewControllers = [navigationController, navigationControllerDetail]
+        splitViewController.preferredDisplayMode = .allVisible
+        splitViewController.delegate = masterViewController
+        
+        //Setting the display button
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        
+        return splitViewController
     }
     
     func navigate(to route: Routes, parameters: Any?) {
@@ -37,19 +47,26 @@ class Router {
             //We'll go back with back button
             break
         case .map:
-            if let currentNav = currentNavigationController, let movie = parameters as? Movie{
-                let movieMapVC = configureMovieMap(selectedMovie: movie)
-                currentNav.pushViewController(movieMapVC, animated: true)
+            guard let movie = parameters as? Movie else { return }
+            masterViewController.collapseDetail = false
+            splitViewController.showDetailViewController(detailViewController.navigationController!, sender: nil)
+            //Map may not be initialized, so give it a little time
+            if detailViewController.map == nil {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.detailViewController.movie = movie
+                }
+            }else {
+                self.detailViewController.movie = movie
             }
         }
     }
     
-    private func configureMovieList() -> UIViewController {
+    private func configureMovieList() -> MovieListViewController {
         return MovieListSceneConfigurator.configureViewController()
     }
     
-    private func configureMovieMap(selectedMovie movie: Movie) -> UIViewController {
-        return MovieMapSceneConfigurator.configureViewController(selectedMovie: movie)
+    private func configureMovieMap() -> MovieMapViewController {
+        return MovieMapSceneConfigurator.configureViewController()
     }
     
 }

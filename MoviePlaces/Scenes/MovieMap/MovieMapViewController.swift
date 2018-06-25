@@ -15,12 +15,19 @@ class MovieMapViewController: UIViewController {
     private let initialZoom: Double = 15000
     
     private let interactor: MovieMapInteractor
-    private let movie: Movie
-    private var locations: [LocationAnnotation]?
     
-    init(selectedMovie: Movie, interactor: MovieMapInteractor) {
+    var movie: Movie? {
+        didSet {
+            title = movie!.title
+            interactor.getLocations(for: movie!)
+        }
+    }
+    
+    private var locations: [LocationAnnotation]?
+
+    
+    init(interactor: MovieMapInteractor) {
         self.interactor = interactor
-        self.movie = selectedMovie
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,10 +37,16 @@ class MovieMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = movie.title
+        
         map.delegate = self
         centerOnCoordinate(latitude: MoviePlacesConstants.initialCoordinateLatitude, longitude: MoviePlacesConstants.initialCoordinateLongitude, zoomRadius: initialZoom, animated: false)
-        interactor.getLocations(for: movie)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let locations = locations {
+            map.removeAnnotations(locations)
+        }
     }
     
     private func centerOnCoordinate(latitude: Double, longitude: Double, zoomRadius: Double, animated: Bool) {

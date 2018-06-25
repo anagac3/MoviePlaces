@@ -10,13 +10,13 @@ import UIKit
 
 struct MovieMapSceneConfigurator {
     
-    static func configureViewController(selectedMovie movie: Movie) -> UIViewController {
+    static func configureViewController() -> MovieMapViewController {
         
         let storageService = MovieMapStorageService()
         let geolocationService = MovieMapGeolocationService()
         
         let interactor = MovieMapInteractor(storageService: storageService, geolocationService: geolocationService)
-        let movieMapVC = MovieMapViewController(selectedMovie: movie, interactor: interactor)
+        let movieMapVC = MovieMapViewController(interactor: interactor)
         
         interactor.delegate = movieMapVC
         

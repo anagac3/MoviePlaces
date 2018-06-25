@@ -10,7 +10,7 @@ import UIKit
 
 struct MovieListSceneConfigurator {
     
-    static func configureViewController() -> UIViewController {
+    static func configureViewController() -> MovieListViewController {
         
         let networkingService = MovieListNetworkingService()
         let storageService = MovieListStorageService()
